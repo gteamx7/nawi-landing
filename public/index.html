@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POS X — Point of Sale & ERP for Small Business | La Comuna</title>
+<meta name="description" content="Free point of sale and ERP system for your business. The more we grow, the less we all pay. Technology accessible to everyone.">
+<meta name="keywords" content="point of sale, POS, ERP, sales system, inventory management, cash register, small business, retail, restaurant, cafe, free POS, punto de venta, sistema de ventas, inventario">
+<meta property="og:title" content="POS X — Point of Sale & ERP | La Comuna">
+<meta property="og:description" content="The POS that gets cheaper as the community grows. Free to start. Available worldwide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://getposx.app">
+<link rel="canonical" href="https://getposx.app">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#1E40AF;--blue-deep:#1E3A8A;--dark:#0F172A;--light:#F8FAFC;--muted:#64748B;--amber:#F59E0B;--green:#10B981;--surface:#FFFFFF}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;color:var(--dark);background:var(--light);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.15}
+.container{max-width:1120px;margin:0 auto;padding:0 24px}
+
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(15,23,42,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.06)}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-brand span:first-child{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;color:#fff;letter-spacing:1px}
+.nav-tag{font-size:10px;font-weight:600;color:var(--amber);background:rgba(245,158,11,0.15);padding:2px 8px;border-radius:4px;letter-spacing:0.5px}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--blue);color:#fff!important;padding:10px 20px;border-radius:10px;font-weight:600!important}
+.nav-cta:hover{background:var(--blue-deep)}
+
+.hero{padding:140px 0 100px;background:linear-gradient(165deg,var(--dark) 0%,var(--blue-deep) 50%,var(--blue) 100%);color:#fff;position:relative;overflow:hidden;text-align:center}
+.hero::after{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(245,158,11,0.08) 0%,transparent 70%);border-radius:50%}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--amber);background:rgba(245,158,11,0.12);padding:6px 14px;border-radius:20px;margin-bottom:24px;letter-spacing:0.5px}
+.hero h1{font-size:clamp(36px,5vw,64px);font-weight:700;letter-spacing:-2px;margin-bottom:24px;max-width:800px;margin-left:auto;margin-right:auto}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero-sub{font-size:18px;color:rgba(255,255,255,0.65);max-width:560px;margin:0 auto 40px;line-height:1.7}
+.hero-actions{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--dark);text-decoration:none;padding:16px 28px;border-radius:14px;font-weight:700;font-size:16px;transition:transform .2s,box-shadow .2s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.2)}
+.btn-primary svg{width:24px;height:24px}
+.btn-ghost{color:rgba(255,255,255,0.8);text-decoration:none;font-weight:600;font-size:15px;padding:16px 20px;transition:color .2s}
+.btn-ghost:hover{color:#fff}
+.hero-trust{display:flex;gap:24px;justify-content:center;margin-top:48px;flex-wrap:wrap}
+.hero-trust span{font-size:13px;color:rgba(255,255,255,0.4);font-weight:500}
+
+.manifesto{padding:100px 0;text-align:center}
+.manifesto h2{font-size:clamp(28px,4vw,44px);letter-spacing:-1px;margin-bottom:24px}
+.manifesto p{font-size:18px;color:var(--muted);max-width:640px;margin:0 auto 48px;line-height:1.8}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:left}
+.value-card{background:var(--surface);border:1px solid #E2E8F0;border-radius:20px;padding:32px;transition:transform .2s,box-shadow .2s}
+.value-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.06)}
+.value-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px}
+.value-card h3{font-size:18px;margin-bottom:8px}
+.value-card p{font-size:14px;color:var(--muted);line-height:1.6}
+
+.pricing{padding:100px 0;background:var(--dark);color:#fff}
+.pricing h2{font-size:clamp(28px,4vw,44px);text-align:center;letter-spacing:-1px;margin-bottom:16px}
+.pricing-sub{text-align:center;color:rgba(255,255,255,0.5);font-size:16px;margin-bottom:60px}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,0.1);border-radius:20px;overflow:hidden}
+.tier{background:rgba(255,255,255,0.04);padding:36px 24px;text-align:center;position:relative}
+.tier.active{background:rgba(30,64,175,0.3);border:2px solid var(--blue);border-radius:18px;margin:-2px;z-index:1}
+.tier-members{font-size:12px;font-weight:600;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+.tier-price{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;margin-bottom:4px}
+.tier-period{font-size:13px;color:rgba(255,255,255,0.4)}
+.tier.active .tier-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:0 0 8px 8px;letter-spacing:0.5px}
+
+.features{padding:100px 0}
+.features h2{font-size:clamp(28px,4vw,44px);text-align:center;letter-spacing:-1px;margin-bottom:16px}
+.features-sub{text-align:center;color:var(--muted);font-size:16px;margin-bottom:60px}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature{background:var(--surface);border:1px solid #E2E8F0;border-radius:16px;padding:28px;transition:transform .2s}
+.feature:hover{transform:translateY(-3px)}
+.feature-icon{font-size:28px;margin-bottom:16px}
+.feature h3{font-size:16px;margin-bottom:6px}
+.feature p{font-size:13px;color:var(--muted);line-height:1.5}
+
+.community{padding:100px 0;background:linear-gradient(180deg,var(--light) 0%,#EEF2FF 100%)}
+.community h2{font-size:clamp(28px,4vw,44px);text-align:center;letter-spacing:-1px;margin-bottom:16px}
+.community-sub{text-align:center;color:var(--muted);font-size:16px;margin-bottom:60px;max-width:560px;margin-left:auto;margin-right:auto}
+.community-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.comm-card{background:var(--surface);border-radius:20px;padding:40px;border:1px solid #E2E8F0}
+.comm-card h3{font-size:22px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.comm-card p{color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:20px}
+.comm-examples{display:flex;flex-wrap:wrap;gap:8px}
+.comm-tag{font-size:12px;font-weight:500;padding:6px 12px;border-radius:8px;background:#EEF2FF;color:var(--blue)}
+.comm-tag.voted{background:rgba(16,185,129,0.1);color:var(--green)}
+
+.negocios{padding:80px 0;text-align:center}
+.negocios h2{font-size:28px;letter-spacing:-0.5px;margin-bottom:40px}
+.negocios-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.negocio-chip{font-size:14px;font-weight:500;padding:10px 20px;border-radius:12px;background:var(--surface);border:1px solid #E2E8F0;color:var(--dark)}
+
+.cta-final{padding:100px 0;background:var(--dark);color:#fff;text-align:center}
+.cta-final h2{font-size:clamp(32px,5vw,52px);letter-spacing:-1.5px;margin-bottom:16px}
+.cta-final p{color:rgba(255,255,255,0.5);font-size:18px;margin-bottom:40px}
+.cta-final .btn-primary{font-size:18px;padding:18px 36px}
+
+footer{padding:40px 0;background:var(--dark);border-top:1px solid rgba(255,255,255,0.06);text-align:center}
+footer p{font-size:13px;color:rgba(255,255,255,0.3)}
+footer a{color:rgba(255,255,255,0.5);text-decoration:none}
+
+@media(max-width:768px){
+  .values-grid{grid-template-columns:1fr}
+  .tiers{grid-template-columns:repeat(2,1fr)}
+  .features-grid{grid-template-columns:1fr}
+  .community-grid{grid-template-columns:1fr}
+  .hero{padding:120px 0 60px}
+  .nav-links{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#" class="nav-brand">
+      <span>POS X</span>
+      <span class="nav-tag">by La Comuna</span>
+    </a>
+    <div class="nav-links">
+      <a href="#pricing">Pricing</a>
+      <a href="#features">Features</a>
+      <a href="#community">Community</a>
+      <a href="https://play.google.com/store/apps/details?id=com.gteamx7.nawi" class="nav-cta" target="_blank">Download free</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">🌍 Now available worldwide</div>
+    <h1>The more we grow,<br>the <em>less we all pay</em></h1>
+    <p class="hero-sub">POS X is the point of sale and ERP system that gets cheaper as the community grows. Because technology shouldn't be a luxury.</p>
+    <div class="hero-actions">
+      <a href="https://play.google.com/store/apps/details?id=com.gteamx7.nawi" class="btn-primary" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199 2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.395 12l2.303-2.492zM5.864 2.658 16.8 9.99l-2.302 2.302L5.864 2.658z"/></svg>
+        Download free
+      </a>
+      <a href="#pricing" class="btn-ghost">See pricing ↓</a>
+    </div>
+    <div class="hero-trust">
+      <span>✓ 7-day free trial</span>
+      <span>✓ No credit card required</span>
+      <span>✓ Cancel anytime</span>
+      <span>✓ 35+ reports included</span>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="container">
+    <h2>We're not a software company.<br>We're a <em style="font-style:normal;color:var(--blue)">tech cooperative.</em></h2>
+    <p>La Comuna was born in Guatemala with an idea for the world: the technology to run your business shouldn't cost what big corporations charge. Every new member, from any country, strengthens the entire community.</p>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon" style="background:rgba(30,64,175,0.08);">📉</div>
+        <h3>Price drops with growth</h3>
+        <p>The more businesses that join, the lower the cost for everyone. It's not a discount — it's the model. More members = less cost per member.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon" style="background:rgba(245,158,11,0.08);">🗳️</div>
+        <h3>You decide what's next</h3>
+        <p>The community votes on which reports, integrations and features get built first. Your voice counts as much as anyone else's.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon" style="background:rgba(16,185,129,0.08);">🔄</div>
+        <h3>Always improving</h3>
+        <p>Constant updates. No extra charges for new versions. Every improvement reaches all members automatically, forever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <h2>The price drops with the community</h2>
+    <p class="pricing-sub">Start free for 7 days. When you're ready, the ERP plan costs less as the community grows worldwide.</p>
+    <div class="tiers">
+      <div class="tier active">
+        <div class="tier-badge">WE'RE HERE</div>
+        <div class="tier-members">0 – 100</div>
+        <div class="tier-price">$12.99</div>
+        <div class="tier-period">/month</div>
+      </div>
+      <div class="tier">
+        <div class="tier-members">100 – 500</div>
+        <div class="tier-price">$9.99</div>
+        <div class="tier-period">/month</div>
+      </div>
+      <div class="tier">
+        <div class="tier-members">500 – 1,000</div>
+        <div class="tier-price">$6.99</div>
+        <div class="tier-period">/month</div>
+      </div>
+      <div class="tier">
+        <div class="tier-members">1,000+</div>
+        <div class="tier-price">$4.99</div>
+        <div class="tier-period">/month</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="container">
+    <h2>Everything your business needs</h2>
+    <p class="features-sub">35 reports, full inventory, and tools that expensive POS systems don't give you.</p>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>Point of Sale</h3>
+        <p>Accept cash, card or transfer. Digital receipts. Automatic tax calculation. Works on any Android device.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📦</div>
+        <h3>Real-time inventory</h3>
+        <p>Stock tracking, reorder alerts, movement history, categories. Know exactly what you have and what you need.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📊</div>
+        <h3>35 reports</h3>
+        <p>Sales, inventory, finance, CRM, operations and tax. Interactive charts. Export to PDF and Excel.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏦</div>
+        <h3>Cash register close</h3>
+        <p>Daily close in one tap. Automatic cash vs system comparison. Detect discrepancies instantly.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">👥</div>
+        <h3>Customers & CRM</h3>
+        <p>Customer database, purchase history, top clients, purchase frequency. Tax ID for invoicing.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💸</div>
+        <h3>Expense tracking</h3>
+        <p>Log expenses by category and supplier. Income statement. Cash flow. Gross margin per product.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏢</div>
+        <h3>Multi-location</h3>
+        <p>Manage multiple locations from one account. Reports per branch. Inventory transfers between locations.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌎</div>
+        <h3>Multi-country</h3>
+        <p>Local currencies, taxes and fiscal reports adapted to your country. Available in 25+ countries worldwide.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🤖</div>
+        <h3>Built-in AI</h3>
+        <p>AI advisor analyzes your business automatically. One of the few POS systems in the world with integrated AI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="community" id="community">
+  <div class="container">
+    <h2>The community builds the product</h2>
+    <p class="community-sub">Members vote on what gets built. Not a product team in Silicon Valley — you and your business.</p>
+    <div class="community-grid">
+      <div class="comm-card">
+        <h3>📊 Custom reports</h3>
+        <p>Need a report that doesn't exist? Propose it. The community votes and La Comuna builds it. Everyone gets it.</p>
+        <div class="comm-examples">
+          <span class="comm-tag voted">✓ Food cost</span>
+          <span class="comm-tag voted">✓ ABC analysis</span>
+          <span class="comm-tag">Margin by hour</span>
+          <span class="comm-tag">Daily waste</span>
+          <span class="comm-tag">Sales vs weather</span>
+        </div>
+      </div>
+      <div class="comm-card">
+        <h3>🔌 Custom integrations</h3>
+        <p>Want to connect your POS with another service? The community decides which integrations get prioritized.</p>
+        <div class="comm-examples">
+          <span class="comm-tag">WhatsApp Business</span>
+          <span class="comm-tag">Uber Eats</span>
+          <span class="comm-tag">QuickBooks</span>
+          <span class="comm-tag">Stripe</span>
+          <span class="comm-tag">Accounting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="negocios">
+  <div class="container">
+    <h2>Built for your type of business</h2>
+    <div class="negocios-grid">
+      <span class="negocio-chip">☕ Cafés</span>
+      <span class="negocio-chip">🍽️ Restaurants</span>
+      <span class="negocio-chip">👕 Clothing stores</span>
+      <span class="negocio-chip">🏪 Grocery stores</span>
+      <span class="negocio-chip">🔧 Hardware stores</span>
+      <span class="negocio-chip">📚 Bookstores</span>
+      <span class="negocio-chip">💊 Pharmacies</span>
+      <span class="negocio-chip">🍞 Bakeries</span>
+      <span class="negocio-chip">💇 Beauty salons</span>
+      <span class="negocio-chip">🌸 Flower shops</span>
+      <span class="negocio-chip">🐾 Vet clinics</span>
+      <span class="negocio-chip">🍕 Food trucks</span>
+      <span class="negocio-chip">🏋️ Gyms</span>
+      <span class="negocio-chip">📱 Electronics</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <h2>Join La Comuna.<br>Grow your business.</h2>
+    <p>7-day free trial. No credit card. No commitment.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.gteamx7.nawi" class="btn-primary" target="_blank">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:24px;height:24px"><path d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199 2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.395 12l2.303-2.492zM5.864 2.658 16.8 9.99l-2.302 2.302L5.864 2.658z"/></svg>
+      Download free on Google Play
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>POS X by La Comuna · Technology accessible to everyone · <a href="mailto:gteamx7@gmail.com">Contact</a> · <a href="https://wa.me/50255753099" target="_blank">WhatsApp</a></p>
+    <p style="margin-top:8px;">Made in Guatemala 🇬🇹 · For the world 🌍</p>
+  </div>
+</footer>
+
+</body>
+</html>
