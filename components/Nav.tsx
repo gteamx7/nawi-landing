@@ -46,7 +46,7 @@ export default function Nav() {
     <nav ref={navRef} className="nav">
       <div className="container nav-inner">
         <a href="#" className="nav-brand">
-          <span className="nav-brand-name">POS X</span>
+          <img src="/logo.png" alt="POS X" width={36} height={36} /><span className="nav-brand-name">POS X</span>
           <span className="nav-tag">by La Comuna</span>
         </a>
         <div className="nav-links">
