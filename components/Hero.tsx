@@ -73,7 +73,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-trust">
-          <span>✓ 7-day free trial</span>
+          <span>✓ 100% free to start</span>
           <span>✓ No credit card required</span>
           <span>✓ Cancel anytime</span>
           <span>✓ 35+ reports included</span>
