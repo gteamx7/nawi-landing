@@ -17,9 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'POS X — Point of Sale & ERP for Small Business | La Comuna',
+  title: 'POS X — Know Your Business | La Comuna',
   description:
-    'Free point of sale and ERP system for your business. The more we grow, the less we all pay. Technology accessible to everyone.',
+    'Stop guessing how your business is doing. Track sales, inventory and profits from your phone. Free to start.',
   keywords:
     'point of sale, POS, ERP, sales system, inventory management, cash register, small business, retail, restaurant, cafe, free POS, punto de venta, sistema de ventas, inventario',
   openGraph: {

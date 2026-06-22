@@ -53,7 +53,7 @@ export default function BusinessChips() {
   return (
     <section className="negocios" ref={sectionRef}>
       <div className="container">
-        <h2 className="negocios-title">Built for your type of business</h2>
+        <h2 className="negocios-title">Whatever you sell, we&apos;ve got you</h2>
         <div className="negocios-grid">
           {BUSINESSES.map((name) => (
             <span key={name} className="negocio-chip">

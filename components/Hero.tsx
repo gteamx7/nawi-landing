@@ -13,11 +13,11 @@ const PlayIcon = () => (
   </svg>
 );
 
-// "The more we grow," — plain words
-const LINE1 = ['The ', 'more ', 'we ', 'grow,'];
-// "the less we all pay" — "the" plain, rest amber
-const LINE2_PLAIN = 'the ';
-const LINE2_ACCENT = ['less ', 'we ', 'all ', 'pay'];
+// "Know your numbers." — all plain
+const LINE1 = ['Know ', 'your ', 'numbers.'];
+// "Grow your business." — only "Grow" is amber
+const LINE2_ACCENT = 'Grow ';
+const LINE2_PLAIN = ['your ', 'business.'];
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -49,17 +49,17 @@ export default function Hero() {
             </span>
           ))}
           <br />
-          <span className="hero-word">{LINE2_PLAIN}</span>
-          {LINE2_ACCENT.map((word, i) => (
-            <span key={`l2-${i}`} className="hero-word hero-word--accent">
+          <span className="hero-word hero-word--accent">{LINE2_ACCENT}</span>
+          {LINE2_PLAIN.map((word, i) => (
+            <span key={`l2-${i}`} className="hero-word">
               {word}
             </span>
           ))}
         </h1>
 
         <p className="hero-sub">
-          POS X is the point of sale and ERP system that gets cheaper as the community grows.
-          Because technology shouldn&apos;t be a luxury.
+          You didn&apos;t start your business to drown in spreadsheets. POS X handles the numbers
+          so you can handle the customers.
         </p>
 
         <div className="hero-actions">
@@ -68,7 +68,7 @@ export default function Hero() {
             Download free
           </a>
           <a href="#features" className="btn-ghost">
-            Explore features ↓
+            See how it works ↓
           </a>
         </div>
 

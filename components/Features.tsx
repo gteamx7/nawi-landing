@@ -9,48 +9,48 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 const FEATURES = [
   {
     icon: '💰',
-    title: 'Point of Sale',
-    desc: 'Accept cash, card or transfer. Digital receipts. Automatic tax calculation. Works on any Android device.',
+    title: 'Your next sale is one tap away',
+    desc: 'Sell in cash, card or transfer. Digital receipts. No special hardware. Just your phone.',
   },
   {
     icon: '📦',
-    title: 'Real-time inventory',
-    desc: 'Stock tracking, reorder alerts, movement history, categories. Know exactly what you have and what you need.',
+    title: 'Never run out again',
+    desc: 'Know what to reorder before you run out. Get alerts, track every movement, stay in control.',
   },
   {
     icon: '📊',
-    title: '35 reports',
-    desc: 'Sales, inventory, finance, CRM, operations and tax. Interactive charts. Export to PDF and Excel.',
+    title: 'Finally know how much you actually made',
+    desc: '35 reports that answer the questions keeping you up at night. Export to PDF and Excel.',
   },
   {
     icon: '🏦',
-    title: 'Cash register close',
-    desc: 'Daily close in one tap. Automatic cash vs system comparison. Detect discrepancies instantly.',
+    title: 'Go home with peace of mind',
+    desc: 'Daily close in one tap. Compare counted cash vs system. Spot discrepancies instantly.',
   },
   {
     icon: '👥',
-    title: 'Customers & CRM',
-    desc: 'Customer database, purchase history, top clients, purchase frequency. Tax ID for invoicing.',
+    title: 'Turn one-time buyers into regulars',
+    desc: 'Remember every customer. See who buys most. Reward the ones who come back.',
   },
   {
     icon: '💸',
-    title: 'Expense tracking',
-    desc: 'Log expenses by category and supplier. Income statement. Cash flow. Gross margin per product.',
+    title: 'Find the leaks in your business',
+    desc: 'See where your money actually goes. Track by category, supplier, or period.',
   },
   {
     icon: '🏢',
-    title: 'Multi-location',
-    desc: 'Manage multiple locations from one account. Reports per branch. Inventory transfers between locations.',
+    title: 'Scale without losing control',
+    desc: 'Run 5 locations like you\'re standing in each one. Reports per branch, transfers included.',
   },
   {
     icon: '🌎',
-    title: 'Multi-country',
-    desc: 'Local currencies, taxes and fiscal reports adapted to your country. Available in 25+ countries worldwide.',
+    title: 'Works where you are',
+    desc: 'Your currency. Your taxes. Your fiscal reports. Available in 25+ countries.',
   },
   {
     icon: '🤖',
-    title: 'Built-in AI',
-    desc: "AI advisor analyzes your business automatically. One of the few POS systems in the world with integrated AI.",
+    title: 'Like a business advisor that never sleeps',
+    desc: 'Ask your business any question. Get the answer instantly. Built-in AI, no extra cost.',
   },
 ];
 
@@ -85,9 +85,9 @@ export default function Features() {
     <section className="features" id="features" ref={sectionRef}>
       <div className="container">
         <div className="features-header">
-          <h2>Everything your business needs</h2>
+          <h2>Stop guessing. Start knowing.</h2>
           <p className="features-sub">
-            35 reports, full inventory, and tools that expensive POS systems don&apos;t give you.
+            Every tool you need to know exactly how your business is doing — from your phone.
           </p>
         </div>
         <div className="features-grid">

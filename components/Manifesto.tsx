@@ -45,44 +45,41 @@ export default function Manifesto() {
     <section className="manifesto" ref={sectionRef}>
       <div className="container">
         <h2 className="manifesto-title">
-          We&apos;re not a software company.
+          Every big POS company charges you more as they grow.
           <br />
-          We&apos;re a <em>tech cooperative.</em>
+          <em>We do the opposite.</em>
         </h2>
         <p className="manifesto-body">
-          La Comuna was born in Guatemala with an idea for the world: the technology to run your
-          business shouldn&apos;t cost what big corporations charge. Every new member, from any
-          country, strengthens the entire community.
+          You&apos;re not just buying software. You&apos;re joining a movement of business owners
+          who refuse to overpay for technology. The more of us there are, the less we all pay.
         </p>
         <div className="values-grid">
           <div className="value-card">
             <div className="value-icon" style={{ background: 'rgba(30,64,175,0.08)' }}>
               📉
             </div>
-            <h3>Price drops with growth</h3>
+            <h3>Pay less together</h3>
             <p>
-              The more businesses that join, the lower the cost for everyone. It&apos;s not a
-              discount — it&apos;s the model. More members = less cost per member.
+              Every new member makes it cheaper for everyone. Not a discount — it&apos;s the model.
             </p>
           </div>
           <div className="value-card">
             <div className="value-icon" style={{ background: 'rgba(245,158,11,0.08)' }}>
               🗳️
             </div>
-            <h3>You decide what&apos;s next</h3>
+            <h3>You build this with us</h3>
             <p>
-              The community votes on which reports, integrations and features get built first. Your
-              voice counts as much as anyone else&apos;s.
+              Tell us what you need. We build it. Everyone gets it. That&apos;s how it should work.
             </p>
           </div>
           <div className="value-card">
             <div className="value-icon" style={{ background: 'rgba(16,185,129,0.08)' }}>
               🔄
             </div>
-            <h3>Always improving</h3>
+            <h3>Never stop growing</h3>
             <p>
-              Constant updates. No extra charges for new versions. Every improvement reaches all
-              members automatically, forever.
+              Constant updates. No extra charges. Every improvement reaches everyone automatically,
+              forever.
             </p>
           </div>
         </div>

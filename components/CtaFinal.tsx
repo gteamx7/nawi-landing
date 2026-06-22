@@ -36,12 +36,8 @@ export default function CtaFinal() {
   return (
     <section className="cta-final" ref={sectionRef}>
       <div className="container cta-content">
-        <h2>
-          Join La Comuna.
-          <br />
-          Grow your business.
-        </h2>
-        <p>7-day free trial. No credit card. No commitment.</p>
+        <h2>Ready to stop guessing?</h2>
+        <p>7 days free. No credit card. Know your business by Friday.</p>
         <a href={PLAY_URL} className="btn-primary" target="_blank" rel="noopener noreferrer">
           <PlayIcon />
           Download free on Google Play

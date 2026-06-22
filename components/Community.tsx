@@ -46,15 +46,15 @@ export default function Community() {
     <section className="community" id="community" ref={sectionRef}>
       <div className="container">
         <div className="community-header">
-          <h2>The community builds the product</h2>
+          <h2>Tell us what you need. We&apos;ll build it.</h2>
           <p className="community-sub">
-            Members vote on what gets built. Not a product team in Silicon Valley — you and your
-            business.
+            Every feature request from the community gets heard. The most voted ones get built.
+            Everyone benefits.
           </p>
         </div>
         <div className="community-grid">
           <div className="comm-card">
-            <h3>📊 Custom reports</h3>
+            <h3>📊 Need a report that doesn&apos;t exist?</h3>
             <p>
               Need a report that doesn&apos;t exist? Propose it. The community votes and La Comuna
               builds it. Everyone gets it.
@@ -68,7 +68,7 @@ export default function Community() {
             </div>
           </div>
           <div className="comm-card">
-            <h3>🔌 Custom integrations</h3>
+            <h3>🔌 Want to connect with another service?</h3>
             <p>
               Want to connect your POS with another service? The community decides which
               integrations get prioritized.
